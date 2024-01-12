@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="shortcut icon" href="./h.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+  <script src="https://kit.fontawesome.com/927b56deba.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://www.paypalobjects.com/webstatic/en_US/developer/docs/css/cardfields.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=<%= clientId %>&components=buttons,hosted-fields&enable-funding=venmo&disable-funding=paylater"
+    data-client-token="<%= clientToken %>" data-sdk-integration-source="integrationbuilder_ac">
+    </script>
+  <!-- Add the following styles to the head section of your checkout.ejs file -->
+
+  <!-- Your existing scripts (PayPal SDK and others) -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=<%= clientId %>&components=buttons,hosted-fields&enable-funding=venmo&disable-funding=paylater"
+    data-client-token="<%= clientToken %>" data-sdk-integration-source="integrationbuilder_ac"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=Ab17vOfeo8rx7NqNvV9Q54kl7jrkHhEb_amI6h-CZ4WnqdEnBH6Kxyx2vJQTU4oLzOuGpxmd9p7I_duB"></script>
+  <script src="app.js"></script>
+
+</head>
+
+<body>
+  <section id="header">
+    <a href="#"><img src="img\The handyman you can trust (1).png" width="60px" height="60px" alt="Logo"></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        <a href="#" id="close"><i class="fa-sharp fa-solid fa-rectangle-xmark"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+    </div>
+  </section>
+
+  <div id="paypal-button-container" class="paypal-button-container"></div>
+  <div class="card_container">
+
+    <!--<form id="card-form">
+        <label for="card-number">Card Number</label>
+        <div id="card-number" class="card_field"></div>
+        <div style="display: flex; flex-direction: row">
+          <div>
+            <label for="expiration-date">Expiration Date</label>
+            <div id="expiration-date" class="card_field"></div>
+          </div>
+          <div style="margin-left: 10px">
+            <label for="cvv">CVV</label>
+            <div id="cvv" class="card_field"></div>
+          </div>
+        </div>
+        <label for="card-holder-name">Name on Card</label>
+        <input
+          type="text"
+          id="card-holder-name"
+          name="card-holder-name"
+          autocomplete="off"
+          placeholder="card holder name"
+        >
+        <div>
+          <label for="card-billing-address-street">Billing Address</label>
+          <input
+            type="text"
+            id="card-billing-address-street"
+            name="card-billing-address-street"
+            autocomplete="off"
+            placeholder="street address"
+          >
+        </div>
+        <div>
+          <label for="card-billing-address-unit">&nbsp;</label>
+          <input
+            type="text"
+            id="card-billing-address-unit"
+            name="card-billing-address-unit"
+            autocomplete="off"
+            placeholder="unit"
+          >
+        </div>
+        <div>
+          <input
+            type="text"
+            id="card-billing-address-city"
+            name="card-billing-address-city"
+            autocomplete="off"
+            placeholder="city"
+          >
+        </div>
+        <div>
+          <input
+            type="text"
+            id="card-billing-address-state"
+            name="card-billing-address-state"
+            autocomplete="off"
+            placeholder="state"
+          >
+        </div>
+        <div>
+          <input
+            type="text"
+            id="card-billing-address-zip"
+            name="card-billing-address-zip"
+            autocomplete="off"
+            placeholder="zip / postal code"
+          >
+        </div>
+        <div>
+          <input
+            type="text"
+            id="card-billing-address-country"
+            name="card-billing-address-country"
+            autocomplete="off"
+            placeholder="country code"
+          >
+        </div>
+        <br><br>
+        <button value="submit" id="submit" class="btn">Pay</button>
+      </form> -->
+    <!-- <p id="result-message"></p> -->
+    <div class="container">
+    </div>
+  </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=Ab17vOfeo8rx7NqNvV9Q54kl7jrkHhEb_amI6h-CZ4WnqdEnBH6Kxyx2vJQTU4oLzOuGpxmd9p7I_duB"></script>
+  <script src="app.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
