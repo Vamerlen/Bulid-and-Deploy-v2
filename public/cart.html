@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doudou Hardware Shop</title>
+    <script src="https://kit.fontawesome.com/927b56deba.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img\The handyman you can trust (1).png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add this line in the head section of your HTML files -->
+    <script src="cart.js"></script>
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img\The handyman you can trust (1).png" width="60px" height="60px" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-sharp fa-solid fa-rectangle-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="cart-header">
+        <h2>#YourCartSomething</h2>
+        <p>Cart items here !</p>
+    </section>
+
+    <!-- Add this table structure where you want to display the cart items -->
+    <section id="cart" class="section-p1">
+        <table id="cart-table" width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div id="subtotal">
+            <h3>Cart Total</h3>
+            <table>
+                <tr>
+                    <td>Total:</td>
+                    <td id="cart-total">R0.00</td>
+                </tr>
+            </table>
+            <script>
+                const cartItems = JSON.parse(new URLSearchParams(window.location.search).get('items') || '[]');
+                document.write(cartItems.map(item => `<li>${item.name} - $${item.price}</li>`).join(''));
+            </script>
+            </ul>
+            <!-- Link to the checkout page -->
+            <a href="/checkout">Proceed to Checkout</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>The Hardware Doudou</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <p>© 2024 Vamerlen, Favie @ The Hardware Doudou</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this script to your cart page -->
+    <script>
+        document.getElementById("checkoutBtn").addEventListener("click", async () => {
+            try {
+                // Get cart details from wherever it is stored in your application
+                const cart = getCartDetails();
+
+                const response = await fetch("/api/orders", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ cart }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+
+                    // Check if the response contains a valid redirectURL
+                    if (data && data.redirectURL) {
+                        window.location.href = data.redirectURL;
+                    } else {
+                        console.error("Invalid or missing redirectURL in the server response:", data);
+                    }
+                } else {
+                    console.error("Failed to initiate checkout:", response.statusText);
+                }
+            } catch (error) {
+                console.error("Error initiating checkout:", error);
+            }
+        });
+
+        // Example function to get cart details from local storage
+        function getCartDetails() {
+            const cartString = localStorage.getItem("cart");
+            return JSON.parse(cartString) || [];
+        }
+    </script>
+
+
+    <script scr="main.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=Af05d1imY5pASdXESVPqrodcqUqd51QvZbHzK1XvlunDseisojYkjVQ-vj0vkLBiZvjIU2X5TMzOJKYr&currency=USD"></script>
+</body>
+
+</html>
