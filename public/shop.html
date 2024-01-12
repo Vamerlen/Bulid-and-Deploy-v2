@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doudou Hardware Shop</title>
+    <script src="https://kit.fontawesome.com/927b56deba.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img\The handyman you can trust (1).png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add this line in the head section of your HTML files -->
+    <script src="cart.js"></script>
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img\The handyman you can trust (1).png" width="60px" height="60px" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-sharp fa-solid fa-rectangle-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header">
+        <h2>#StayAtHome</h2>
+        <p>Save more with coupons & up to 70% off!</p>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img\woodenproduct\download (1).jpg" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Table 1</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R65.00</h4>
+                </div>
+                <button class="normal" type="button" style="text-decoration: none;"
+                    onclick="addToCart('Table 1', 65.00, 'img/woodenproduct/download (1).jpg')">Add to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (32).jpeg" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Bed 1</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R495.00</h4>
+                </div>
+                <button class="normal" type="button" style="text-decoration: none;"
+                    onclick="addToCart('Bed 1', 495.00, 'img/woodenproduct/download (32).jpeg')">Add to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (31).jpeg">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Bed 2</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R997.00</h4>
+                </div>
+                <button class="normal" type="button" style="text-decoration: none;"
+                    onclick="addToCart('Bed 2', 997.00, 'img/woodenproduct/download (31).jpeg')">Add to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (24).jpeg">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Bed 3</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R1500.00</h4>
+                </div>
+                <button class="normal" type="button"
+                    onclick="addToCart('Bed 3', 1500.00, 'img/woodenproduct/download (24).jpeg')">Add to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\6.png" width="250px" height="250px" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Chair 1</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R90.00</h4>
+                </div>
+                <button class="normal" type="button" style="text-decoration: none;"
+                    onclick="addToCart('Chair 1', 90.00, 'img/woodenproduct/download (6).png')">Add to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (25).jpeg" width="250px" height="250px" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Chair 2</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R78.00</h4>
+                </div>
+                <button class="normal" type="button" style="text-decoration: none;"
+                    onclick="addToCart('Chair 2', 78.00, 'img/woodenproduct/download (25).jpeg')">Add to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (27).jpeg" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Chair 3</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R89.00</h4>
+                </div>
+                <button class="normal" type="button" style="text-decoration: none;"
+                    onclick="addToCart('Chair 3', 89.00, 'img/woodenproduct/download (27).jpeg')">Add to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\8.png" width="250px" height="250px" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Chair 8</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R100.00</h4>
+                </div>
+                <button type="button" onclick="addToCart('Chair 8', 100.00, 'img/woodenproduct/8.png')">Add to
+                    cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (7).jpeg" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Table 1</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R65.00</h4>
+                </div>
+
+
+                <button type="button" onclick="addToCart('Table 1', 65.00, 'img/woodenproduct/download (7).jpeg')">Add
+                    to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (8).jpeg" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Table 2</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R550.00</h4>
+                </div>
+
+
+                <button type="button" onclick="addToCart('Table 2', 550.00, 'img/woodenproduct/download (7).jpeg')">Add
+                    to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (10).jpeg" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Table 3</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R108.00</h4>
+                </div>
+
+
+                <button type="button" onclick="addToCart('Table 3', 108.00, 'img/woodenproduct/download (10).jpeg')">Add
+                    to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (11).jpeg" width="300px" height="300px" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Table 4</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R50.00</h4>
+                </div>
+
+
+                <button type="button" onclick="addToCart('Table 4', 50.00, 'img/woodenproduct/download (11).jpeg')">Add
+                    to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (12).jpeg" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Chair 9</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R90.00</h4>
+                </div>
+
+
+                <button type="button" onclick="addToCart('Chair 9', 90.00, 'img/woodenproduct/download (12).jpeg')">Add
+                    to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (13).jpeg" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Table 9</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R78.00</h4>
+                </div>
+
+
+                <button type="button" onclick="addToCart('Chair 2', 95.00, 'img/woodenproduct/download (13).png')">Add
+                    to cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (14).jpeg" width="250px" height="250px" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Table 10</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R75.00</h4>
+                </div>
+                <button type="button" onclick="addToCart('Chair 2', 95.00, 'img/woodenproduct/2.png')">Add to
+                    cart</button>
+            </div>
+            <div class="pro">
+                <img src="img\woodenproduct\download (16).jpeg" width="250px" height="250px" alt="Product">
+                <div class="des">
+                    <span>The DKK Hardware</span>
+                    <h5>Table 11</h5>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>R100.00</h4>
+                </div>
+
+
+                <button type="button">Add to cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pagination" class="section-p1">
+        <a href="shoppageother1.html">1</a>
+        <a href="shoppageother2.html">2</a>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>The Hardware Doudou</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <p>© 2024 Vamerlen, Favie @ The Hardware Doudou</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=Af05d1imY5pASdXESVPqrodcqUqd51QvZbHzK1XvlunDseisojYkjVQ-vj0vkLBiZvjIU2X5TMzOJKYr&currency=USD"></script>
+
+
+</body>
+
+</html>
